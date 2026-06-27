@@ -1,0 +1,43 @@
+name: lint
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  typescript:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ./typescript
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - run: npm install --no-audit --no-fund
+      - run: npm run typecheck
+
+  shell:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: shellcheck
+        run: |
+          sudo apt-get update && sudo apt-get install -y shellcheck
+          shellcheck curl/*.sh
+
+  python:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        target: [python, crewai, langchain]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: syntax check
+        run: |
+          python -m py_compile ${{ matrix.target }}/*.py

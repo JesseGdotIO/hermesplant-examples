@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "hermes-plant": {
+      "url": "https://hermesplant.com/mcp",
+      "type": "streamableHttp"
+    }
+  }
+}
