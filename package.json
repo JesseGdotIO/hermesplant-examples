@@ -1,0 +1,24 @@
+{
+  "name": "hermesplant-examples",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Runnable MCP server and integration examples for Hermes Plant deterministic finance APIs paid over x402.",
+  "workspaces": [
+    "mcp-server"
+  ],
+  "scripts": {
+    "start": "npm --prefix mcp-server start",
+    "mcp:start": "npm --prefix mcp-server start"
+  },
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "x402",
+    "finance",
+    "ai-agents"
+  ],
+  "engines": {
+    "node": ">=20"
+  }
+}

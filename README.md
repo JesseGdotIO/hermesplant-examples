@@ -72,6 +72,17 @@ Pick the runtime that matches your stack:
 | MCP config | [mcp-config/](./mcp-config/) | One-paste config for Claude Desktop / Cline / Cursor |
 | MCP server | [mcp-server/](./mcp-server/) | Runnable stdio MCP bridge for discovery, server-card inspection, and hosted-tool listing |
 
+### MCP server registry build
+
+This repo includes a root `glama.json` and root `Dockerfile` for MCP registry crawlers:
+
+```bash
+docker build -t hermesplant-mcp-server .
+docker run --rm -i hermesplant-mcp-server
+```
+
+The container starts the stdio MCP bridge in [mcp-server/](./mcp-server/), which exposes Hermes Plant discovery tools and hosted MCP metadata without requiring API keys.
+
 ## Wallet setup
 
 Every example assumes:
