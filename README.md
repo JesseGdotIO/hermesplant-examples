@@ -2,7 +2,7 @@
 
 Working code that calls [Hermes Plant](https://hermesplant.com) — deterministic finance and quant APIs that AI agents call and pay for per call over [x402](https://x402.org). No API keys, no shared secrets, no hallucinated math.
 
-**What's here**: drop-in examples in six runtimes — `curl`, TypeScript, Python, [CrewAI](https://www.crewai.com/), [LangChain](https://www.langchain.com/), and an MCP server config for Claude Desktop / Cline / Cursor.
+**What's here**: drop-in examples in six runtimes — `curl`, TypeScript, Python, [CrewAI](https://www.crewai.com/), [LangChain](https://www.langchain.com/), an MCP server config for Claude Desktop / Cline / Cursor, and a runnable stdio MCP bridge for registry crawlers and local clients.
 
 ## What is Hermes Plant?
 
@@ -70,6 +70,7 @@ Pick the runtime that matches your stack:
 | CrewAI | [crewai/](./crewai/) | Finance-agent crew calling Hermes endpoints |
 | LangChain | [langchain/](./langchain/) | LangChain `Tool` wrapping Hermes |
 | MCP config | [mcp-config/](./mcp-config/) | One-paste config for Claude Desktop / Cline / Cursor |
+| MCP server | [mcp-server/](./mcp-server/) | Runnable stdio MCP bridge for discovery, server-card inspection, and hosted-tool listing |
 
 ## Wallet setup
 
