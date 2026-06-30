@@ -1,6 +1,6 @@
-# Hermes Plant — examples
+# Hermes Plant MCP Server — examples
 
-Working code that calls [Hermes Plant](https://hermesplant.com) — deterministic finance and quant APIs that AI agents call and pay for per call over [x402](https://x402.org). No API keys, no shared secrets, no hallucinated math.
+Runnable MCP server and working examples that call [Hermes Plant](https://hermesplant.com) — deterministic finance and quant APIs that AI agents call and pay for per call over [x402](https://x402.org). No API keys, no shared secrets, no hallucinated math.
 
 **What's here**: drop-in examples in six runtimes — `curl`, TypeScript, Python, [CrewAI](https://www.crewai.com/), [LangChain](https://www.langchain.com/), an MCP server config for Claude Desktop / Cline / Cursor, and a runnable stdio MCP bridge for registry crawlers and local clients.
 
